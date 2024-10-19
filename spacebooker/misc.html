@@ -1,0 +1,9 @@
+<div class="category-links">
+    <a href="?{% if selected_building %}building={{ selected_building }}&{% endif %}{% if search_query %}search={{ search_query }}&{% endif %}category=" class="{% if not selected_category %}active{% endif %}">All Categories</a>
+    {% for category_value, category_label in categories %}
+        <a href="?{% if selected_building %}building={{ selected_building }}&{% endif %}{% if search_query %}search={{ search_query }}&{% endif %}category={{ category_value }}" 
+           class="{% if category_value == selected_category %}active{% endif %}">
+            {{ category_label }}
+        </a>
+    {% endfor %}
+</div>

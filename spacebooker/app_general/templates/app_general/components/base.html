@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceBooker</title>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="main" id="welcome_section">
+        {% include 'app_general/components/site_header.html' %}
+
+        <main class="content-wrapper">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include 'app_general/components/site_footer.html' %}
+    </div>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

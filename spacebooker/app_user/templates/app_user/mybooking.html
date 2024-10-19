@@ -1,0 +1,97 @@
+{% extends 'app_general/components/base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Mybooking.css' %}">
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: SpaceBooker - My Booking ::</title>
+    <!-- Style CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<!-- pictures -->
+     <div class="titlepic">
+        <h2>My Booking</h2>
+    </div>
+
+    <!-- dashboard -->
+    <div class="container">
+        <div class="dashboard">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Room</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="reservationList">
+                    <!-- Reservations will be populated here -->
+                    {% for booking in bookings %}
+                    <tr>
+                        <td>{{ booking.booking_date|date:"Y-m-d" }}</td>
+                        <td>{{ booking.name }}</td>
+                        <td>{{ booking.room.name }}</td>
+                        <td>{{ booking.start_time|time:"H:i" }}</td>
+                        <td>{{ booking.end_time|time:"H:i" }}</td>
+                        
+                        
+                        <td><span class="status-badge status-{{ booking.status|lower }}">{{ booking.get_status_display }}</span></td>
+                    <td>
+                        {% if booking.status == 'pending' %}
+                        <button class="btn btn-danger btn-sm delete-booking" data-booking-id="{{ booking.id }}">Cancel</button>
+                        {% endif %}
+                    </td>
+                        
+                    </tr>
+                    {% empty %}
+                    <tr>
+                    <td colspan="7">No bookings found.</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.delete-booking').click(function() {
+        var bookingId = $(this).data('booking-id');
+        if (confirm('Are you sure you want to cancel this booking?')) {
+            $.ajax({
+                url: '/users/delete-booking/' + bookingId + '/',
+                type: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                success: function(response) {
+                    alert(response.message);
+                    location.reload();
+                },
+                error: function() {
+                    alert('An error occurred while canceling the booking.');
+                }
+            });
+        }
+    });
+});
+</script>        
+    
+</body>
+</html>
+
+{% endblock %}

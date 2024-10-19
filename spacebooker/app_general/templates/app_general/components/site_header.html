@@ -1,0 +1,53 @@
+<nav>
+    <div class="logo">
+        <h1>SpaceBooker</h1>
+    </div>
+
+    <div class="nav-links">
+        <ul>
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#date-section">Event</a></li>
+                    <li><a href="#room_section">Rooms</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'room' %}">Book</a></li>
+                    <li><a href="{% url 'my_booking' %}">My Booking</a></li>
+                    {% else %}
+
+                    {% endif %}
+                </ul>
+            </div>
+            {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button class="logout_btn" type="submit">Log out</button>
+            <style>
+                .logout_btn {
+                height: 45px;
+                border-radius: 3px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 0 25px;
+                color: white;
+                background-color: black;
+                transition: background-color 0.3s ease;
+                }
+.logout_btn:hover{
+    background-color:rgb(139, 24, 47) ;
+}
+            </style>
+            </form>
+            {% else %}
+            <button class="signin_btn">
+                <a href="{% url 'login' %}">Sign in</a>
+            </button>
+            <button class="regis_btn">
+                <a href="{% url 'register' %}">Register</a>
+            </button>
+            {% endif %} 
+        </ul>
+    </div>
+</nav>

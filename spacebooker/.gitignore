@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+__pycache__/
+*.pyc
+
+# C extensions
+*.so
+
+# Database files
+db.sqlite3
+
+# Django migrations
+*/migrations/
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# macOS file
+.DS_Store
+
+# Log files
+*.log
+
+# Ignore local .env files containing sensitive information
+.env

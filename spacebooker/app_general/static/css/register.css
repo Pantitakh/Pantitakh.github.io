@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: rgb(139, 24, 47);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 3px 10px rgb(74, 74, 74);
+}
+
+.logo {
+    margin-left: 10px;
+    text-align: left;
+    color: rgb(139, 24, 47);
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links ul li {
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.nav-links ul li a:hover {
+    color:  rgb(139, 24, 47);
+    text-decoration: underline;
+}
+
+/*buttons*/
+.signin_btn, .regis_btn {
+    height: 45px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 25px;
+}
+
+.signin_btn {
+    background: rgb(228, 228, 228);
+    color: black;
+}
+
+.regis_btn {
+    background: rgb(40, 39, 39);
+    color: white;
+}
+
+.signin_btn a, .regis_btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*texts*/
+.text{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+/*first text*/
+h3 {
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+}
+
+/*second text*/
+.text p {
+    font-weight: 200;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 45px;
+    font-size: 20px;
+}
+
+/*form*/
+.form {
+    width: 550px;
+    background: white;
+    color: rgb(40, 39, 39);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgb(74, 74, 74);
+    margin-right: 50px;
+}
+
+.User {
+    margin-top: 25px;
+}
+
+.Email {
+    margin-top: 15px;
+}
+
+.Userpassword {
+    margin-top: 15px;
+}
+
+.Confirmpassword {
+    margin-top: 15px;
+}
+
+.form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.form .input-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: rgb(40, 39, 39);
+    padding: 10px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 5px;
+}
+
+/*submit button*/
+.form .btn {
+    width: 100%;
+    height: 50px;
+    background: rgb(40, 39, 39);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+/*picture*/
+.picture {
+    flex: 1; 
+    max-width: 100;
+}
+
+.picture img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin: 0 auto;           
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: auto; 
+}
+.footer {
+    margin-top: 130px;
+    color: white;
+    background-color: rgb(40, 39, 39);
+    padding: 40px 0;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+
+.footer h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-weight: 200;
+    color: rgb(228, 228, 228);
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: rgb(228, 228, 228);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+    color: rgb(228, 228, 228);
+}
+
+.footer .row .col-md-4 {
+    max-width: 45%;
+}
+
+.footer .row .col-md-2 {
+    max-width: 25%;
+}
+
+.line {
+    max-width: 80%;
+    height: 0.1px;
+    background: rgb(180, 180, 180);
+    margin-top: 40px;
+    margin-left: 10%;
+}
+
+.copyright{
+    justify-content: center;
+    padding-top: 40px;
+    margin: 0 450px;
+    text-align: center;
+    color: rgb(228, 228, 228);
+    font-size: 14px;
+}

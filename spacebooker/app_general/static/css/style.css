@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: rgb(139, 24, 47);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 3px 10px rgb(74, 74, 74);
+}
+
+.logo {
+    margin-left: 10px;
+    text-align: left;
+    color: rgb(139, 24, 47);
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links ul li {
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.nav-links ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/*buttons*/
+.signin_btn, .regis_btn {
+    height: 45px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 25px;
+}
+
+.signin_btn , .regis_btn{
+    background: rgb(228, 228, 228);
+    color: black;
+}
+
+.regis_btn {
+    background: rgb(40, 39, 39);
+    color: white;
+}
+
+.signin_btn a, .regis_btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*texts*/
+.text{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+/*first text*/
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+/*second text*/
+.text p {
+    font-weight: 200;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 45px;
+}
+
+/*form*/
+.form {
+    width: 550px;
+    background: white;
+    color: rgb(40, 39, 39);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgb(74, 74, 74);
+    margin-right: 50px;
+}
+
+.User {
+    margin-top: 25px;
+}
+
+.Email {
+    margin-top: 15px;
+}
+
+.Userpassword {
+    margin-top: 15px;
+}
+
+.Confirmpassword {
+    margin-top: 15px;
+}
+
+.form .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.form .input-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: rgb(40, 39, 39);
+    padding: 10px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 5px;
+}
+
+/*submit button*/
+.form .btn {
+    width: 100%;
+    height: 50px;
+    background: rgb(40, 39, 39);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    margin-top: 30px;
+}
+/*picture*/
+.picture {
+    flex: 1; 
+    max-width: 100;
+}
+
+.picture img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin: 0 auto;           
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: auto; 
+}
+
+/*footer*/
+.footer {
+    margin-top: 130px;
+    color: white;
+    background-color: rgb(40, 39, 39);
+    padding: 40px 0;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+
+.footer h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-weight: 200;
+    color: rgb(228, 228, 228);
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: rgb(228, 228, 228);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+    color: rgb(228, 228, 228);
+}
+
+.footer .row .col-md-4 {
+    max-width: 45%;
+}
+
+.footer .row .col-md-2 {
+    max-width: 25%;
+}
+
+.line {
+    max-width: 1200px;
+    height: 0.1px;
+    background: rgb(180, 180, 180);
+    margin-top: 40px;
+    margin-left:150px;
+}
+
+.copyright{
+    justify-content: center;
+    padding-top: 40px;
+    margin: 0 450px;
+    text-align: center;
+    color: rgb(228, 228, 228);
+    font-size: 14px;
+}
+#home {
+    background: url('img/room_example.jpg') no-repeat center center/cover;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#home h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+  
+#home h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255);
+    margin-bottom: 40px;
+}
+
+.main_inner_search_block {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-bottom: 30px;
+    margin: 0 150px;
+}
+
+.main_inner_search_block select {
+    border: none;
+    padding-top: 2px;
+    padding-bottom: 0;
+    height: 44px;
+    box-shadow: none;
+}
+
+.main_input_search_part {
+    margin-top: 50px;
+    border-radius: 60px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 6px;
+    border: 3px solid rgba(0, 0, 0, 0.12);
+    max-height: 70px;
+}
+
+.main_input_search_part_item {
+    flex: 1;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+    margin-top: 2px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.main_input_search_part .main_input_search_part_item:nth-last-child(2) {
+    border-right: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main_input_search_part_item.a {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 0;
+    background: transparent;
+}
+
+.main_input_search_part select {
+    font-size: 16px;
+    padding: 0 85px 0;
+}
+
+.main_input_search_part select:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.main_input_search_part input,
+.main_input_search_part input:focus {
+    font-size: 16px;
+    border: none;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    height: 44px;
+    line-height: 44px;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+}
+
+.main_input_search_part button.button {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 40px;
+    margin-right: 1px;
+    height: 50px;
+    outline: none;
+    border-radius: 50px;
+    background-color: rgb(40, 39, 39);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.main_input_search_part button.button:hover {
+    background-color: rgb(139, 24, 47);
+}
+
+.daterangepicker {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.daterangepicker .applyBtn, .daterangepicker .cancelBtn {
+    background: rgb(40, 39, 39);
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    font-weight: 400;
+}
+
+.daterangepicker .applyBtn:hover, .daterangepicker .cancelBtn:hover {
+    background: rgb(139, 24, 47);
+}
+.room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    margin-top: 80px;
+}
+
+.room h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+.room h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.room p {
+    font-size: 16px;
+    font-weight: 200;
+    margin: 5px 0;
+}
+
+.room .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.card-img-top {
+    width: 300px;
+    height: 180px;
+}
+
+.describe {
+    margin-top: 10px;
+    color: black;
+}
+
+.icon-status i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: black;
+}
+
+.card {
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow:0 3px 10px rgb(74, 74, 74);
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
+    cursor : pointer;
+}
+.btn {
+    display: inline-block; /* Allows width/height */
+    padding: 10px 20px;  /* Adjust padding as needed */
+    background-color: rgb(40, 39, 39); /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+}
